@@ -47,7 +47,7 @@ class ManufacturerListView(LoginRequiredMixin, generic.ListView):
         if form.is_valid():
             return Manufacturer.objects.filter(
                 name__icontains=form.cleaned_data["name"])
-        return Driver.objects.all()
+        return Manufacturer.objects.all()
 
 
 class ManufacturerCreateView(LoginRequiredMixin, generic.CreateView):

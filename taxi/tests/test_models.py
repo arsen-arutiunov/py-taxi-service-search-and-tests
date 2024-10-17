@@ -23,7 +23,9 @@ class ModelTests(TestCase):
     def test_car_str(self):
         car = Car.objects.create(model="test",
                                  manufacturer=Manufacturer.objects.create(
-                                     name="test", ))
+                                     name="test",
+                                     country="test"
+                                 ))
         self.assertEqual(str(car), car.model)
 
     def test_create_driver_with_license_number(self):
